@@ -13,6 +13,7 @@ class walker(maze.maze):
         self.end = curmaze.end
         self.maze[self.cur[0]][self.cur[1]] = 2
         self.game()
+        input()
 
     def move(self, x, y):
         nw = self.cur.copy()
@@ -49,5 +50,5 @@ class walker(maze.maze):
                 curtime = time.time()
                 os.system("clear")
                 self.print()
-        print("good job!!!")
-        exit(0)
+        self.maze[self.end[0]][self.end[1]] = 1
+        print("good job!!!\nPress Enter to continue")
